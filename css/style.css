@@ -1,9 +1,13 @@
 .jumbotron{
-    background-image: url("../img/DesertBanner.jpg");
-    background-repeat: no-repeat;
-    background-size: 100% 100%;
+    background: linear-gradient(#cacaca,white,white,white, #cacaca);
+
 }
 
 .carousel-item:hover{
     opacity: 0.7;
+}
+
+.navbar{
+    /*background-color: #d48eff !important;*/
+    background: #cacaca;
 }
