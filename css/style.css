@@ -11,3 +11,8 @@
     /*background-color: #d48eff !important;*/
     background: #cacaca;
 }
+
+.container_2{
+    background: linear-gradient(#cacaca,white,white,white, #cacaca);
+
+}
