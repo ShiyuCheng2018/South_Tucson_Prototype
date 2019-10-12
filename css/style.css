@@ -3,6 +3,12 @@
 
 }
 
+.banner-pic{
+    background-image: url("../img/tucson_2.jpg");
+    background-size: 100% 100%;
+    background-repeat: no-repeat;
+}
+
 .carousel-item:hover{
     opacity: 0.7;
 }
