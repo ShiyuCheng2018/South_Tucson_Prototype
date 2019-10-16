@@ -18,10 +18,10 @@
 <body>
 
 <!--jumbotron-->
-<div class="jumbotron jumbotron-fluid m-0 bg-white">
+<div class="jumbotron jumbotron-fluid m-0 bg-white d-none d-md-block">
 	<div class="container">
-		<div class="row">
-			<div class="col-3 pr-0">
+		<div class="row ">
+			<div class="col-md-3 col pr-0">
 				<img class="mx-auto" src="img/logo.png" style="height: 150px; width: 200px;" >
 			</div>
 			<div class="col-6">
@@ -29,18 +29,35 @@
 					<h5 >City of</h5>
 				</div>
 				<div class="row">
-					<div class="col"><h1 class="display-4 text-primary font-weight-bold">SOUTH TUCSON</h1></div>
+					<div class="col d-none d-md-block"><h1 class="display-4 text-primary font-weight-bold">SOUTH TUCSON</h1></div>
 				</div>
 				<div class="row">
 					<h5 class="mx-auto ">The Pueblo within a city</h5>
 				</div>
 			</div>
-			<div class="col-3 banner-pic">
+			<div class="col-md-3 banner-pic d-sm-none d-md-block">
 			</div>
+		</div>
+		<div class="banner-pic d-sm-pic d-md-none mx-auto" style="height: 150px; width: 240px;" >
 		</div>
 		<p class="lead m-2 ">This is a modified jumbotron that occupies the entire horizontal space of its parent.</p>
 	</div>
 </div>
+
+<!--mobile jumbotron-->
+<div class="jumbotron jumbotron-fluid m-0 bg-white d-block d-md-none">
+	<div class="container">
+		<div class="row"><img class="mx-auto" src="img/logo.png" style="height: 150px; width: 200px;" ></div>
+		<div class="row"><div class="col"><h5 >City of</h5></div></div>
+		<div class="row"><h1 class="text-primary font-weight-bold m-auto" >SOUTH TUCSON</h1></div>
+		<div class="row"><h5 class="mx-auto mx-auto">The Pueblo within a city</h5></div>
+		<div class="banner-pic d-sm-pic d-md-none mx-auto" style="height: 150px; width: 240px;" >
+		</div>
+		<p class="lead m-2 ">This is a modified jumbotron that occupies the entire horizontal space of its parent.</p>
+	</div>
+</div>
+<!--end of mobile jumbotron-->
+
 <!--end of jumbotron-->
 <!--nav-->
 <nav class="navbar navbar-expand-lg navbar-light  m-0">
@@ -80,7 +97,7 @@
 	<hr>
 	<div class="row m-md-3">
 <!--		left-->
-		<div class="col-md-3 left mx-auto">
+		<div class="col-md-3 left mx-auto mb-4">
 				<div class="list-group">
 					<a href="#" class="list-group-item list-group-item-action bg-info text-white">Government</a>
 					<a href="#" class="list-group-item list-group-item-action">Office of Mayor</a>
@@ -138,7 +155,7 @@
 		</div>
 <!--		end of middle-->
 <!--		right-->
-		<div class="col-md-4 right mx-auto">
+		<div class="col-md-4 right mx-auto mt-4 mt-md-0">
 			<ul class="list-group list-group-flush">
 				<a href="#" class="list-group-item list-group-item-action bg-info text-white">News</a>
 				<a href="#" class="list-group-item list-group-item-action">PUBLIC NOTICE: CITY OF SOUTH TUCSON MAYOR AND CITY COUNCIL</a>
@@ -387,7 +404,7 @@
 			<div class="row m-4">
 				<div class="col">
 					<h4>Links</h4>
-					<ul class="p-1 ">
+					<ul class="p-1 list-unstyled">
 						<li class="text-primary">Link1</li>
 						<li class="text-primary">Link2</li>
 						<li class="text-primary">Link3</li>
@@ -396,7 +413,7 @@
 				</div>
 				<div class="col">
 					<h4>Links</h4>
-					<ul class="p-1 ">
+					<ul class="p-1 list-unstyled">
 						<li class="text-primary">Link1</li>
 						<li class="text-primary">Link2</li>
 						<li class="text-primary">Link3</li>
@@ -405,7 +422,7 @@
 				</div>
 				<div class="col">
 					<h4>Links</h4>
-					<ul class="p-1 ">
+					<ul class="p-1 list-unstyled">
 						<li class="text-primary">Link1</li>
 						<li class="text-primary">Link2</li>
 						<li class="text-primary">Link3</li>
@@ -418,10 +435,8 @@
 	<div class="row bg-secondary">
 		<p class="mx-auto my-2 text-white">Address: 1601 South 6th Ave. Tucson, Arizona 85713</p>
 	</div>
-
 </div>
 <!--end of footer-->
-
 
 
 <!-- Optional JavaScript -->
