@@ -10,7 +10,8 @@
 	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
 	<!--	favicon-->
 	<link rel='icon' href='img/logo.png' type='image/x-icon'/>
-
+<!--	jquery-->
+	<script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
 	<title>South Tucson - Community</title>
 </head>
 <body>
@@ -96,13 +97,13 @@
 		<div class="col col-2 ml-2">
 			<div class="row m-2"><h3>Community</h3></div>
 			<div class="row">
-				<ul class="list-group ml-4 mt-2">
-					<a href="#" class="list-group-item list-group-item-action bg-info text-white " style="margin-bottom: 1px">Overview</a>
-					<a href="#" class="list-group-item list-group-item-action bg-info text-white" style="margin-bottom: 1px">BRUSH AND BULKY</a>
-					<a href="#" class="list-group-item list-group-item-action bg-info text-white" style="margin-bottom: 1px">City Staff Directory</a>
-					<a href="#" class="list-group-item list-group-item-action bg-info text-white" style="margin-bottom: 1px">Demographics</a>
-					<a href="#" class="list-group-item list-group-item-action bg-info text-white" >Photo Gallery</a>
-				</ul>
+				<div class="list-group ml-4 mt-2">
+					<a class="list-group-item list-group-item-action bg-info text-white" id="overview_click" style="margin-bottom: 1px">Overview</a>
+					<a class="list-group-item list-group-item-action bg-info text-white" id="bab_click" style="margin-bottom: 1px">BRUSH AND BULKY</a>
+					<a class="list-group-item list-group-item-action bg-info text-white" id="city_staff_click" style="margin-bottom: 1px">City Staff Directory</a>
+					<a class="list-group-item list-group-item-action bg-info text-white" id="demographics_click" style="margin-bottom: 1px">Demographics</a>
+					<a class="list-group-item list-group-item-action bg-info text-white" id="gallery_click">Photo Gallery</a>
+				</div>
 			</div>
 			<hr>
 <!--			contact info-->
@@ -127,7 +128,7 @@
 <!--		community info-->
 		<div class="col col-7">
 <!--			overview-->
-			<div class="overview  d-none">
+			<div class="overview">
 				<h2>COMMUNITY</h2>
 				<div class="community_info mt-4">
 					<img src="img/south_tucson_community.jpg" class="float-right rounded m-2" alt="community" >
@@ -138,18 +139,11 @@
 			</div>
 <!--			end of overview-->
 <!--			city staff-->
-			<div class="city_staff">
+			<div class="city_staff d-none">
 				<h2>City Staff</h2>
 <!--				City Attorney-->
-				<table class="table table-hover table-striped mt-4">
-					<thead>
-					<tr>
-						<th scope="col"></th>
-						<th scope="col"></th>
-						<th scope="col">City Attorney</th>
-						<th scope="col"></th>
-					</tr>
-					</thead>
+				<h3 class="bg-primary p-2 mt-0 text-white mt-4">City Attorney</h3>
+				<table class="table table-hover table-striped">
 					<thead>
 					<tr>
 						<th scope="col">Contact:</th>
@@ -169,15 +163,8 @@
 				</table>
 <!--				end of City Attorney-->
 <!--				City Clerk-->
-				<table class="table table-hover table-striped mt-4">
-					<thead>
-					<tr>
-						<th scope="col"></th>
-						<th scope="col"></th>
-						<th scope="col">City Attorney</th>
-						<th scope="col"></th>
-					</tr>
-					</thead>
+				<h3 class="bg-primary p-2 mt-0 text-white">City Clerk</h3>
+				<table class="table table-hover table-striped">
 					<thead>
 					<tr>
 						<th scope="col">Contact:</th>
@@ -188,21 +175,60 @@
 					</thead>
 					<tbody>
 					<tr>
-						<th scope="row">Bobby Yu</th>
-						<td>City Attorney</td>
+						<th scope="row">Denise Valencia</th>
+						<td>Admin Manager</td>
 						<td>(520)792-2424 ext. 313</td>
-						<td>byu@southtucson.org</td>
+						<td>dvalencia@southtucson.org</td>
+					</tr>
+					<tr>
+						<th scope="row">Veronica Moreno</th>
+						<td>City Clerk</td>
+						<td>(520)792-2424 ext. 311</td>
+						<td>vmoreno@southtucson.org</td>
 					</tr>
 					</tbody>
 				</table>
-				<!--				end of City Attorney-->
+				<!--				end of City Clerk-->
+<!--				city mayor-->
+				<h3 class="bg-primary p-2 mt-0 text-white">City Mayor</h3>
+				<table class="table table-hover table-striped">
+					<thead>
+					<tr>
+						<th scope="col">Contact:</th>
+						<th scope="col">Position:</th>
+						<th scope="col">Phone:</th>
+						<th scope="col">Email:</th>
+					</tr>
+					</thead>
+					<tbody>
+					<tr>
+						<th scope="row">Bob Teso</th>
+						<td>Mayor</td>
+						<td></td>
+						<td>bteso@southtucson.org</td>
+					</tr>
+					<tr>
+						<th scope="row">Herman Lopez</th>
+						<td>Vice Mayor</td>
+						<td></td>
+						<td>hlopez@southtucson.org</td>
+					</tr>
+					<tr>
+						<th scope="row">Pual Diaz</th>
+						<td>Acting Mayor</td>
+						<td></td>
+						<td>pdiaz@southtucson.org</td>
+					</tr>
+					</tbody>
+				</table>
+<!--				end of city mayor-->
 
 			</div>
 <!--			end of city staff-->
 		</div>
 <!--		end of community info-->
-		<div class="col col-2">
-			<div class="row m-2">
+		<div class="col col">
+			<div class="row m-3">
 				<div class="row m-2"><h5>Upcoming Events</h5></div>
 				<div class="row">
 					<ul class="list-group list-group-flush">
@@ -218,8 +244,11 @@
 			<hr>
 		</div>
 	</div>
+</div>
 <!--	end of container_1-->
-	<hr>
+<hr>
+
+
 
 <!-- Optional JavaScript -->
 <!-- jQuery first, then Popper.js, then Bootstrap JS -->
@@ -227,4 +256,20 @@
 <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
 <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
 </body>
+<script>
+    $(window).on('load', function() {
+		const tab_clicks = ["overview_click", "bab_click", "city_staff_click", "demographics_click", "gallery_click"]
+	    $("#city_staff_click").on("click", function () {
+	        console.log("click");
+            $(".city_staff").removeClass("d-none");
+            $(".overview").addClass("d-none");
+        });
+        $("#overview_click").on("click", function () {
+            console.log("click");
+            $(".city_staff").addClass("d-none");
+            $(".overview").removeClass("d-none");
+        });
+    })
+</script>
+
 </html>
