@@ -128,7 +128,7 @@
 <!--		community info-->
 		<div class="col col-7">
 <!--			overview-->
-			<div class="overview d-none">
+			<div class="overview">
 				<h2>COMMUNITY</h2>
 				<div class="community_info mt-4">
 					<img src="../img/south_tucson_community.jpg" class="float-right rounded m-2" alt="community" >
@@ -138,8 +138,94 @@
 				</div>
 			</div>
 <!--			end of overview-->
+
+			<!--			Demographics-->
+			<div class="demographics d-none">
+				<h2>Demographics</h2>
+				<div class="demographics_info mt-4">
+					<table class="facts_table table table-striped">
+						<thead>
+						<tr>
+							<th scope="col">FACTS</th>
+							<th scope="col">DATA</th>
+						</tr>
+						</thead>
+						<tbody>
+						<tr>
+							<td>Population</td>
+							<td>5,652</td>
+						</tr>
+						<tr>
+							<td>Businesses</td>
+							<td>339</td>
+						</tr>
+						<tr>
+							<td>Housing</td>
+							<td>2,175</td>
+						</tr>
+						<tr>
+							<td>Poverty Level</td>
+							<td>51%</td>
+						</tr>
+						<tr>
+							<td>Median Age</td>
+							<td>32.4</td>
+						</tr>
+						<tr>
+							<td>HS Graduates</td>
+							<td>57.6%</td>
+						</tr>
+						<tr>
+							<td>Median Income</td>
+							<td>$22,867</td>
+						</tr>
+						<tr>
+							<td>Veterans</td>
+							<td>194</td>
+						</tr>
+						</tbody>
+					</table>
+
+					<table class="table table-striped">
+						<thead>
+						<tr>
+							<th scope="col">RACE</th>
+							<th scope="col">DATA</th>
+						</tr>
+						</thead>
+						<tbody>
+						<tr>
+							<td>Black</td>
+							<td>137 (2.4%)</td>
+						</tr>
+						<tr>
+							<td>Native American</td>
+							<td>337 (6%)</td>
+						</tr>
+						<tr>
+							<td>Asian</td>
+							<td>6 (0.1%)</td>
+						</tr>
+						<tr>
+							<td>Two or More Race</td>
+							<td>262 (4.6%)</td>
+						</tr>
+						<tr>
+							<td>Hispanic</td>
+							<td>4,755 (84.1%)</td>
+						</tr>
+						<tr>
+							<td>White</td>
+							<td>479 (8.5%)</td>
+						</tr>
+						</tbody>
+					</table>
+				</div>
+			</div>
+			<!--			end of Demographics-->
+
 <!--			Brush and Bulky-->
-			<div class="bab">
+			<div class="bab d-none">
 				<h2>BRUSH AND BULKY</h2>
 				<div class="bab_info mt-4">
 					<div class="row">
@@ -390,17 +476,37 @@
 </body>
 <script>
     $(window).on('load', function() {
-		const tab_clicks = ["overview_click", "bab_click", "city_staff_click", "demographics_click", "gallery_click"]
+		const tab_clicks = ["overview_click", "bab_click", "city_staff_click", "demographics_click", "gallery_click"];
 	    $("#city_staff_click").on("click", function () {
 	        console.log("click");
             $(".city_staff").removeClass("d-none");
             $(".overview").addClass("d-none");
+            $(".demographics").addClass("d-none");
+            $(".bab").addClass("d-none");
         });
         $("#overview_click").on("click", function () {
             console.log("click");
-            $(".city_staff").addClass("d-none");
             $(".overview").removeClass("d-none");
+            $(".city_staff").addClass("d-none");
+            $(".demographics").addClass("d-none");
+            $(".bab").addClass("d-none");
         });
+        $("#demographics_click").on("click", function () {
+            console.log("click");
+            $(".bab").addClass("d-none");
+            $(".city_staff").addClass("d-none");
+            $(".overview").addClass("d-none");
+            $(".demographics").removeClass("d-none");
+        });
+        $("#bab_click").on("click", function () {
+            console.log("click");
+            $(".city_staff").addClass("d-none");
+            $(".overview").addClass("d-none");
+            $(".demographics").addClass("d-none");
+            $(".bab").removeClass("d-none");
+        });
+
+
     })
 </script>
 
