@@ -102,7 +102,7 @@
 					<a class="list-group-item list-group-item-action bg-info text-white" id="council_click" style="margin-bottom: 1px">City Council</a>
 					<a class="list-group-item list-group-item-action bg-info text-white" id="departments_click" style="margin-bottom: 1px">Departments</a>
 					<a class="list-group-item list-group-item-action bg-info text-white" id="agendas_click" style="margin-bottom: 1px">Agendas & Minutes</a>
-					<a class="list-group-item list-group-item-action bg-info text-white" id="neighbor_click" style="margin-bottom: 1px">Neighborhood Preservation</a>
+					<a class="list-group-item list-group-item-action bg-info text-white" id="development_services_click" style="margin-bottom: 1px">Development Services</a>
 				</div>
 			</div>
 			<hr>
@@ -186,7 +186,7 @@
 			</div>
 			<!--			end of city council-->
 <!--			departments-->
-			<div class="departments_click">
+			<div class="departments_click d-none">
 				<h2>CITY DEPARTMENTS</h2>
 				<div class="department_info m-4">
 <!--					Accordion-->
@@ -299,6 +299,48 @@
 				</div>
 			</div>
 <!--			end of city departments-->
+
+			<!--			development services-->
+			<div class="development_services_click d-none">
+				<h2>DEVELOPMENT SERVICES</h2>
+				<div class="development_services_info m-4">
+<!--					single row-->
+					<div class="row my-4">
+						<div class="col col-3">
+							<img src="../img/development_services/zoning_map.png">
+						</div>
+						<div class="col ">
+							<h4 class="text-primary">Planning and Zonining</h4>
+							<p>The Planning & Zoning Department is responsible for providing support to the community by interpreting and implementing the General Plan, Zoning Ordinance, land use, and development regulations & Standards as adopted by the City Council.  The Planning, Zoning and Development Services Department reviews all building plans, business license applications, development plans for building and zoning compliance. The Development Services Division reviews and  conducts all inspections related to construction and enforcement within the City. We assist the public and applicants in preparing submittals and answer questions about code compliance.</p>
+						</div>
+					</div>
+<!--					end of single row-->
+					<!--					single row-->
+					<div class="row my-4">
+						<div class="col col-3">
+							<img src="../img/development_services/transportation.png">
+						</div>
+						<div class="col ">
+							<h4 class="text-primary">Planning and Zonining</h4>
+							<p>The goal of Transportation Planning in the City of South Tucson is to set priorities in the field of transportation facilities (streets, public transport lines and pedestrian design) that will meet the City's mobility needs of its current and future residents and users.</p>
+						</div>
+					</div>
+					<!--					end of single row-->
+					<!--					single row-->
+					<div class="row my-4">
+						<div class="col col-3">
+							<img src="../img/development_services/flood.png">
+						</div>
+						<div class="col ">
+							<h4 class="text-primary">Planning and Zonining</h4>
+							<p>The Planning & Zoning Department is responsible for providing support to the community by interpreting and implementing the General Plan, Zoning Ordinance, land use, and development regulations & Standards as adopted by the City Council. The Planning, Zoning and Development Services Department reviews all building plans, business license applications, development plans for building and zoning compliance. The Development Services Division reviews and conducts all inspections related to construction and enforcement within the City. We assist the public and applicants in preparing submittals and answer questions about code compliance.</p>
+						</div>
+					</div>
+					<!--					end of single row-->
+				</div>
+			</div>
+					<!--			end of development services-->
+
 		</div>
 		<div class="col col">
 			<div class="row m-3">
@@ -317,12 +359,31 @@
 			<hr>
 			<div class="row">
 				<div class="col col-12">
-					<ul class="list-group">
+					<ul class="list-group council_click ">
 						<a href="#" class="list-group-item list-group-item-action bg-info text-white mt-2">Public Safety</a>
 						<a href="https://www.library.pima.gov/locations/STU/" class="list-group-item list-group-item-action bg-info text-white mt-2">Sam Lena-South Tucson Library</a>
 						<a href="#" class="list-group-item list-group-item-action bg-info text-white mt-2">City Calendar</a>
 					</ul>
+					<ul class="list-group departments_click d-none">
+						<a href="#" class="list-group-item list-group-item-action bg-info text-white mt-2">Finance</a>
+						<a href="#" class="list-group-item list-group-item-action bg-info text-white mt-2">Fire</a>
+						<a href="#" class="list-group-item list-group-item-action bg-info text-white mt-2">Housing Authority</a>
+						<a href="#" class="list-group-item list-group-item-action bg-info text-white mt-2">HHuman Resources</a>
+						<a href="#" class="list-group-item list-group-item-action bg-info text-white mt-2">Information Technology</a>
+
+
+					</ul>
+					<!--				when department_services_lick-->
+					<ul class="list-group d-none development_services_click">
+						<a href="#" class="list-group-item list-group-item-action bg-info text-white mt-2">Development Services Staff Directory</a>
+						<a href="#" class="list-group-item list-group-item-action bg-info text-white mt-2">Documents and Reports</a>
+						<a href="#" class="list-group-item list-group-item-action bg-info text-white mt-2">Forms and Permits</a>
+						<a href="#" class="list-group-item list-group-item-action bg-info text-white mt-2">Zoning Map</a>
+					</ul>
+					<!--				end of when department_services_lick-->
 				</div>
+
+
 
 			</div>
 		</div>
@@ -434,7 +495,7 @@
 </body>
 <script>
     $(window).on('load', function() {
-        const tab_clicks = ["overview_click", "bab_click", "city_staff_click", "demographics_click", "gallery_click"];
+        const tab_clicks = ["council_click", "departments_click", "agendas_click", "development_services_click"];
 
         tab_clicks.forEach(click => {
             console.log(click);
